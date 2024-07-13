@@ -9,6 +9,12 @@ app.use(express.json());
 // Routes
 app.use('/api', foodRoutes);
 
+app.get("/api", (req, res) => {
+    res.json({
+        status: "success"
+    })
+})
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
